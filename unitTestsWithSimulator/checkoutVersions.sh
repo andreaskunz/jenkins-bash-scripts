@@ -17,10 +17,12 @@ fi
 
 pushd eeros-framework
 git checkout $1
+echo "($0): will run commit: $(git log --oneline --decorate -n 1)"
 popd
 
 pushd sim-eeros
 git checkout $2
+echo "($0): will run commit: $(git log --oneline --decorate -n 1)"
 popd
 
 echo "($0): checkout versions done."
